@@ -1,0 +1,96 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-navy), var(--blue-bright));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--blue-pale);
+  margin-bottom: 28px;
+  border: 2px solid rgba(79, 195, 247, 0.35);
+  box-shadow: 0 0 30px rgba(45, 125, 210, 0.3);
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  line-height: 1.82;
+  font-size: 0.96rem;
+}
+
+.about-contact-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(30, 90, 168, 0.12);
+  border: 1px solid rgba(79, 195, 247, 0.2);
+  color: var(--blue-pale);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.contact-pill:hover {
+  background: rgba(79, 195, 247, 0.1);
+  border-color: var(--blue-electric);
+  color: var(--blue-electric);
+}
+
+/* Highlights */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 14px;
+  transition: all 0.3s;
+}
+
+.highlight-card:hover { transform: translateX(5px); }
+
+.hl-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+
+.hl-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.hl-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}

@@ -1,0 +1,112 @@
+.timeline {
+  position: relative;
+  padding-left: 36px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--blue-navy) 15%, var(--blue-bright) 80%, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -42px;
+  top: 20px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--blue-bright);
+  border: 2px solid var(--blue-electric);
+  box-shadow: 0 0 16px var(--glow-blue);
+}
+
+.exp-card {
+  padding: 28px 30px;
+  border-radius: 16px;
+}
+
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.exp-role {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  color: var(--blue-electric);
+  font-size: 0.88rem;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--blue-pale);
+  background: rgba(30, 90, 168, 0.2);
+  border: 1px solid rgba(79, 195, 247, 0.2);
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.exp-type {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.exp-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-points li {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.exp-points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--blue-bright);
+  font-size: 0.75rem;
+  top: 2px;
+}
+
+@media (max-width: 768px) {
+  .exp-meta { align-items: flex-start; }
+}

@@ -1,0 +1,224 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blobs */
+.hero-blobs { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.12;
+}
+
+.blob-1 {
+  width: 700px;
+  height: 700px;
+  background: var(--blue-navy);
+  top: -150px;
+  right: -150px;
+  animation: floatBlob 9s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 450px;
+  height: 450px;
+  background: var(--blue-bright);
+  bottom: -80px;
+  left: 5%;
+  animation: floatBlob 7s ease-in-out infinite 2s;
+  opacity: 0.08;
+}
+
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  background: var(--blue-electric);
+  top: 40%;
+  left: 38%;
+  animation: floatBlob 11s ease-in-out infinite 1s;
+  opacity: 0.06;
+}
+
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-25px, 35px) scale(1.08); }
+}
+
+/* Canvas */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(79, 195, 247, 0.07);
+  border: 1px solid rgba(79, 195, 247, 0.25);
+  border-radius: 100px;
+  padding: 7px 18px;
+  margin-bottom: 32px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--blue-pale);
+  letter-spacing: 0.1em;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue-electric);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.75); }
+}
+
+/* Name */
+.hero-name-wrap { overflow: hidden; }
+
+.hero-name {
+  font-family: var(--font-head);
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.94;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.name-accent { color: var(--blue-electric); }
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.hero-typing {
+  color: var(--blue-electric);
+  border-right: 2px solid var(--blue-electric);
+  padding-right: 3px;
+}
+
+/* Summary */
+.hero-summary {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin-bottom: 48px;
+  line-height: 1.8;
+}
+
+/* Buttons */
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+/* Socials */
+.hero-socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 52px;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.25s;
+}
+
+.social-btn:hover {
+  border-color: var(--blue-electric);
+  color: var(--blue-electric);
+  background: rgba(79, 195, 247, 0.06);
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.hero-stat { display: flex; flex-direction: column; gap: 4px; }
+
+.stat-num {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--blue-electric);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.scroll-indicator svg { font-size: 1rem; }
+
+@media (max-width: 768px) {
+  .hero-name { font-size: clamp(2.6rem, 12vw, 4rem); }
+  .hero-stats { gap: 24px; }
+  .stat-num { font-size: 1.8rem; }
+}

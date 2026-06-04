@@ -1,0 +1,139 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-intro {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.ci-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(30, 90, 168, 0.2);
+  border: 1px solid rgba(79, 195, 247, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-electric);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+
+.contact-item:hover .ci-icon {
+  background: rgba(79, 195, 247, 0.12);
+  border-color: var(--blue-electric);
+}
+
+.ci-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ci-val {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s;
+  resize: none;
+  width: 100%;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: rgba(79, 195, 247, 0.5);
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.07);
+}
+
+.send-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  font-size: 0.95rem;
+}
+
+.send-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,220 @@
+/* ---- Navbar Shell ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  padding: 16px 5%;
+  transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navbar.scrolled {
+  padding: 10px 5%;
+}
+
+/* ---- Pill Container ---- */
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 6px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navbar.scrolled .nav-inner {
+  background: rgba(5, 13, 26, 0.78);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(79, 195, 247, 0.12);
+  border-radius: 999px;
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(79, 195, 247, 0.06) inset;
+  padding: 0 20px;
+}
+
+/* ---- Logo ---- */
+.nav-logo {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.05em;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.nav-logo span {
+  color: var(--blue-electric);
+}
+
+/* ---- Desktop Links ---- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: block;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link.active {
+  color: var(--blue-electric);
+  background: rgba(79, 195, 247, 0.1);
+}
+
+/* ---- Resume CTA ---- */
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: rgba(79, 195, 247, 0.08);
+  border: 1px solid rgba(79, 195, 247, 0.22);
+  color: var(--blue-electric);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-resume:hover {
+  background: rgba(79, 195, 247, 0.16);
+  border-color: rgba(79, 195, 247, 0.45);
+  box-shadow: 0 0 22px rgba(79, 195, 247, 0.18);
+}
+
+/* ---- Hamburger ---- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+  background: var(--blue-electric);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+  background: var(--blue-electric);
+}
+
+/* ---- Mobile Menu ---- */
+.mobile-menu {
+  background: rgba(5, 13, 26, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(79, 195, 247, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 8px 5%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-link {
+  display: block;
+  padding: 12px 16px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.mobile-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-resume {
+  display: block;
+  padding: 12px 16px;
+  margin-top: 4px;
+  color: var(--blue-electric);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background: rgba(79, 195, 247, 0.08);
+  border: 1px solid rgba(79, 195, 247, 0.18);
+  text-align: center;
+  transition: all 0.18s ease;
+}
+
+.mobile-resume:hover {
+  background: rgba(79, 195, 247, 0.14);
+  border-color: rgba(79, 195, 247, 0.3);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .nav-links  { display: none; }
+  .nav-resume { display: none; }
+  .nav-toggle { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .navbar { padding: 12px 4%; }
+  .navbar.scrolled { padding: 8px 4%; }
+  .mobile-menu { margin: 6px 4%; }
+}
