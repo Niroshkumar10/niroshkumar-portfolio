@@ -49,11 +49,13 @@ const About = () => {
               CI/CD pipelines, and performance optimization. My approach blends clean architecture
               with pixel-perfect UI execution aligned with Figma prototypes.
             </p>
-            <p>
-              Pursuing my B.E. in Computer Science at Arjun College of Technology (graduating 2025)
-              with a CGPA of 7.77, I bring both academic rigor and real-world production experience
-              to every challenge.
-            </p>
+           <p>
+  A graduate in Computer Science and Engineering from Arjun College of Technology,
+  I have successfully transitioned from academia to the professional world, where I
+  contribute to building production-ready applications. My academic background, combined
+  with practical experience in full-stack development, enables me to deliver reliable,
+  user-focused, and scalable software solutions.
+</p>
 
             <div className="about-contact-pills">
               <a href={`mailto:${personalInfo.email}`} className="contact-pill">
