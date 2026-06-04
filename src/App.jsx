@@ -4,10 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
+import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
+import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Loader from './components/Loader/Loader';
@@ -34,11 +36,11 @@ const App = () => {
       cursorPos.current.y += (mouseRef.current.y - cursorPos.current.y) * 0.12;
       if (cursorRef.current) {
         cursorRef.current.style.left = cursorPos.current.x - 11 + 'px';
-        cursorRef.current.style.top = cursorPos.current.y - 11 + 'px';
+        cursorRef.current.style.top  = cursorPos.current.y - 11 + 'px';
       }
       if (dotRef.current) {
         dotRef.current.style.left = mouseRef.current.x - 2.5 + 'px';
-        dotRef.current.style.top = mouseRef.current.y - 2.5 + 'px';
+        dotRef.current.style.top  = mouseRef.current.y - 2.5 + 'px';
       }
       raf = requestAnimationFrame(animate);
     };
@@ -64,17 +66,11 @@ const App = () => {
 
   return (
     <>
-      {/* Loader */}
       <Loader onComplete={() => setLoaded(true)} />
-
-      {/* Scroll progress */}
       <div className="scroll-progress" style={{ width: `${scrollPct}%` }} />
-
-      {/* Custom cursor */}
       <div className="custom-cursor" ref={cursorRef} />
       <div className="cursor-dot" ref={dotRef} />
 
-      {/* Main content */}
       <AnimatePresence>
         {loaded && (
           <motion.div
@@ -88,6 +84,8 @@ const App = () => {
               <div className="divider" />
               <About />
               <div className="divider" />
+              <Services />
+              <div className="divider" />
               <Skills />
               <div className="divider" />
               <Experience />
@@ -96,6 +94,8 @@ const App = () => {
               <div className="divider" />
               <Education />
               <div className="divider" />
+              <Blog />
+              <div className="divider" />
               <Contact showToast={showToast} />
             </main>
             <Footer />
@@ -103,7 +103,6 @@ const App = () => {
         )}
       </AnimatePresence>
 
-      {/* Back to top */}
       <AnimatePresence>
         {showBtt && loaded && (
           <motion.button
@@ -120,7 +119,6 @@ const App = () => {
         )}
       </AnimatePresence>
 
-      {/* Toast */}
       <div className={`toast ${toast ? 'show' : ''}`}>
         ✓ Message sent! I'll get back to you soon.
       </div>

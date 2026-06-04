@@ -1,36 +1,44 @@
 /* ============================
-   GLOBAL STYLES — NAVY BLUE THEME
+   GLOBAL STYLES — NEW PALETTE
    ============================ */
 
 :root {
-  /* Navy Blue Palette */
-  --bg-primary:    #050D1A;
-  --bg-secondary:  #0A1628;
-  --bg-tertiary:   #0F1E36;
-  --bg-card:       #111F38;
-  --bg-card-hover: #162540;
+  /* ---- User-defined palette ---- */
+  --primary:       #2563EB;
+  --primary-dark:  #1D4ED8;
+  --secondary:     #0F172A;
+  --background:    #020617;
+  --surface:       #0B1220;
+  --surface-light: #1E293B;
+  --accent:        #38BDF8;
 
-  /* Accent Blues */
-  --blue-deep:     #0A1628;
-  --blue-navy:     #1A3A6B;
-  --blue-mid:      #1E5AA8;
-  --blue-bright:   #2D7DD2;
-  --blue-electric: #4FC3F7;
+  /* ---- Internal aliases (used in components) ---- */
+  --bg-primary:    #020617;
+  --bg-secondary:  #0B1220;
+  --bg-tertiary:   #0F172A;
+  --bg-card:       #0B1220;
+  --bg-card-hover: #1E293B;
+
+  --blue-deep:     #020617;
+  --blue-navy:     #0F172A;
+  --blue-mid:      #2563EB;
+  --blue-bright:   #1D4ED8;
+  --blue-electric: #38BDF8;
   --blue-glow:     #7DD3FC;
   --blue-pale:     #BAE6FD;
 
   /* Text */
-  --text-primary:  #E8F4FD;
-  --text-secondary:#94B8D4;
-  --text-muted:    #4D7A9E;
+  --text-primary:  #F8FAFC;
+  --text-secondary:#94A3B8;
+  --text-muted:    #475569;
 
   /* Borders */
-  --border:        rgba(77, 122, 158, 0.18);
-  --border-hover:  rgba(79, 195, 247, 0.35);
+  --border:        rgba(51, 65, 85, 0.45);
+  --border-hover:  rgba(56, 189, 248, 0.18);
 
-  /* Glow effects */
-  --glow-blue:     rgba(45, 125, 210, 0.35);
-  --glow-electric: rgba(79, 195, 247, 0.2);
+  /* Glow — kept subtle so content leads, not decoration */
+  --glow-blue:     rgba(37, 99, 235, 0.12);
+  --glow-electric: rgba(56, 189, 248, 0.08);
 
   /* Typography */
   --font-head:  'Plus Jakarta Sans', sans-serif;
@@ -53,13 +61,13 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--blue-mid) var(--bg-secondary);
+  scrollbar-color: var(--blue-electric) var(--bg-secondary);
 }
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
 ::-webkit-scrollbar-thumb { background: var(--blue-mid); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--blue-bright); }
+::-webkit-scrollbar-thumb:hover { background: var(--blue-electric); }
 
 body {
   background: var(--bg-primary);
@@ -161,7 +169,7 @@ body {
 }
 
 .btn-outline:hover {
-  background: rgba(79, 195, 247, 0.07);
+  background: rgba(56, 189, 248, 0.07);
   border-color: var(--blue-electric);
   transform: translateY(-2px);
   box-shadow: 0 4px 20px var(--glow-electric);
@@ -187,11 +195,10 @@ body {
   margin: 0 5%;
 }
 
-/* ---- Cursor ---- */
+/* ---- Custom cursor ---- */
 .custom-cursor {
   position: fixed;
-  width: 22px;
-  height: 22px;
+  width: 22px; height: 22px;
   border: 1.5px solid var(--blue-electric);
   border-radius: 50%;
   pointer-events: none;
@@ -202,21 +209,19 @@ body {
 
 .cursor-dot {
   position: fixed;
-  width: 5px;
-  height: 5px;
+  width: 5px; height: 5px;
   background: var(--blue-electric);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
 }
 
-/* ---- Scroll Progress ---- */
+/* ---- Scroll progress ---- */
 .scroll-progress {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--blue-navy), var(--blue-electric));
+  background: linear-gradient(90deg, var(--blue-bright), var(--blue-electric));
   z-index: 1000;
   transition: width 0.1s;
 }
@@ -224,8 +229,7 @@ body {
 /* ---- Toast ---- */
 .toast {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 32px; right: 32px;
   background: var(--blue-navy);
   border: 1px solid var(--border-hover);
   color: var(--blue-pale);
@@ -244,13 +248,11 @@ body {
   transform: translateY(0);
 }
 
-/* ---- Back to Top ---- */
+/* ---- Back to top ---- */
 .btt-btn {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
-  width: 44px;
-  height: 44px;
+  bottom: 32px; right: 32px;
+  width: 44px; height: 44px;
   background: var(--blue-mid);
   border: none;
   border-radius: 10px;
@@ -267,7 +269,7 @@ body {
 }
 
 .btt-btn.show { opacity: 1; transform: translateY(0); }
-.btt-btn:hover { background: var(--blue-bright); transform: translateY(-3px); }
+.btt-btn:hover { background: var(--blue-electric); color: var(--bg-primary); transform: translateY(-3px); }
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {

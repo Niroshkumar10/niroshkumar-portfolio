@@ -30,14 +30,14 @@
 }
 
 .navbar.scrolled .nav-inner {
-  background: rgba(5, 13, 26, 0.78);
+  background: rgba(2, 6, 23, 0.78);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(79, 195, 247, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.12);
   border-radius: 999px;
   box-shadow:
     0 8px 40px rgba(0, 0, 0, 0.45),
-    0 1px 0 rgba(79, 195, 247, 0.06) inset;
+    0 1px 0 rgba(56, 189, 248, 0.06) inset;
   padding: 0 20px;
 }
 
@@ -89,7 +89,7 @@
 
 .nav-link.active {
   color: var(--blue-electric);
-  background: rgba(79, 195, 247, 0.1);
+  background: rgba(56, 189, 248, 0.1);
 }
 
 /* ---- Resume CTA ---- */
@@ -99,8 +99,8 @@
   gap: 5px;
   padding: 7px 18px;
   border-radius: 999px;
-  background: rgba(79, 195, 247, 0.08);
-  border: 1px solid rgba(79, 195, 247, 0.22);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
   color: var(--blue-electric);
   text-decoration: none;
   font-size: 0.82rem;
@@ -113,9 +113,9 @@
 }
 
 .nav-resume:hover {
-  background: rgba(79, 195, 247, 0.16);
-  border-color: rgba(79, 195, 247, 0.45);
-  box-shadow: 0 0 22px rgba(79, 195, 247, 0.18);
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.18);
 }
 
 /* ---- Hamburger ---- */
@@ -154,10 +154,10 @@
 
 /* ---- Mobile Menu ---- */
 .mobile-menu {
-  background: rgba(5, 13, 26, 0.94);
+  background: rgba(2, 6, 23, 0.94);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(79, 195, 247, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.1);
   border-radius: 20px;
   overflow: hidden;
   margin: 8px 5%;
@@ -195,15 +195,15 @@
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 12px;
-  background: rgba(79, 195, 247, 0.08);
-  border: 1px solid rgba(79, 195, 247, 0.18);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.18);
   text-align: center;
   transition: all 0.18s ease;
 }
 
 .mobile-resume:hover {
-  background: rgba(79, 195, 247, 0.14);
-  border-color: rgba(79, 195, 247, 0.3);
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.3);
 }
 
 /* ---- Responsive ---- */

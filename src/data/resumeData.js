@@ -200,3 +200,66 @@ export const highlights = [
   { icon: "🔐", title: "Security-Minded", desc: "Implemented JWT-based authentication with RBAC across multi-module enterprise applications" },
   { icon: "📦", title: "API Architect", desc: "Designed and integrated 20+ RESTful APIs for product management, orders, and user workflows" },
 ];
+
+export const services = [
+  {
+    id: 1,
+    title: "Frontend Development",
+    desc: "Fast, interactive UIs with React.js, Vite, and modern JavaScript. Component-driven architecture, responsive layouts, and smooth animations.",
+    tags: ["React.js", "JavaScript", "Vite", "Redux Toolkit"],
+  },
+  {
+    id: 2,
+    title: "Backend Development",
+    desc: "Scalable REST APIs with Node.js and Express.js, complete with middleware, error handling, and clean MVC architecture.",
+    tags: ["Node.js", "Express.js", "REST APIs", "MVC"],
+  },
+  {
+    id: 3,
+    title: "Database Design",
+    desc: "Efficient schema design and CRUD operations in MySQL and MongoDB, handling complex relational data for enterprise-scale apps.",
+    tags: ["MySQL", "MongoDB", "Schema Design", "CRUD"],
+  },
+  {
+    id: 4,
+    title: "Full Stack Applications",
+    desc: "End-to-end web apps — from database design to UI delivery. Dashboards, e-commerce, inventory systems, and SaaS products.",
+    tags: ["Full Stack", "E-Commerce", "Dashboards", "SaaS"],
+  },
+  {
+    id: 5,
+    title: "UI/UX Implementation",
+    desc: "Pixel-perfect Figma-to-code conversion with responsive design, accessibility best practices, and micro-interaction animations.",
+    tags: ["Figma", "Responsive", "Accessibility", "Framer Motion"],
+  },
+  {
+    id: 6,
+    title: "Auth & Security",
+    desc: "JWT-based authentication flows with role-based access control, protected routes, and secure session management.",
+    tags: ["JWT", "RBAC", "Authentication", "Security"],
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Building Scalable React Apps with Redux Toolkit",
+    excerpt: "Best practices for state management, code splitting, and component architecture in large-scale React applications.",
+    tags: ["React.js", "Redux", "Architecture"],
+    readTime: "5 min",
+  },
+  {
+    id: 2,
+    title: "JWT + RBAC: Securing Node.js APIs the Right Way",
+    excerpt: "A practical implementation guide for role-based authentication and authorization in Express.js backends.",
+    tags: ["Node.js", "JWT", "Security"],
+    readTime: "7 min",
+  },
+  {
+    id: 3,
+    title: "From Figma to Code: My Full Stack UI Workflow",
+    excerpt: "How I bridge design and development to deliver pixel-perfect, responsive interfaces from Figma designs.",
+    tags: ["UI/UX", "CSS", "Workflow"],
+    readTime: "4 min",
+  },
+];

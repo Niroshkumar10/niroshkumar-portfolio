@@ -5,10 +5,10 @@ import './Navbar.css';
 
 const navLinks = [
   { label: 'About', to: 'about' },
+  { label: 'Services', to: 'services' },
   { label: 'Skills', to: 'skills' },
-  { label: 'Experience', to: 'experience' },
   { label: 'Projects', to: 'projects' },
-  { label: 'Education', to: 'education' },
+  { label: 'Blog', to: 'blog' },
   { label: 'Contact', to: 'contact' },
 ];
 
