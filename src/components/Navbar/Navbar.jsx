@@ -62,7 +62,7 @@ const Navbar = () => {
         </ul>
 
         <motion.a
-          href="/resume/Niroshkumar_Resume ..pdf"
+          href={`${import.meta.env.BASE_URL}resume/Niroshkumar_Resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="nav-resume"
@@ -118,7 +118,7 @@ const Navbar = () => {
               </motion.div>
             ))}
             <motion.a
-              href="/resume/Niroshkumar_Resume ..pdf"
+              href={`${import.meta.env.BASE_URL}resume/Niroshkumar_Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-resume"

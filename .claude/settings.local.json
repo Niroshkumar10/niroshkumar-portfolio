@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Rename-Item \"d:\\\\niroshkumar-portfolio\\\\public\\\\resume\\\\Niroshkumar_Resume ..pdf\" \"Niroshkumar_Resume.pdf\")"
+    ]
+  }
+}
