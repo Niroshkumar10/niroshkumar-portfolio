@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import './Navbar.css';
 
+// Version query busts browser/CDN caches whenever the resume is redeployed
+const RESUME_URL = `${import.meta.env.BASE_URL}resume/Niroshkumar_Resume.pdf?v=${__BUILD_TIME__}`;
+
 const navLinks = [
   { label: 'About', to: 'about' },
   { label: 'Services', to: 'services' },
@@ -62,7 +65,7 @@ const Navbar = () => {
         </ul>
 
         <motion.a
-          href={`${import.meta.env.BASE_URL}resume/Niroshkumar_Resume.pdf`}
+          href={RESUME_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="nav-resume"
@@ -118,7 +121,7 @@ const Navbar = () => {
               </motion.div>
             ))}
             <motion.a
-              href={`${import.meta.env.BASE_URL}resume/Niroshkumar_Resume.pdf`}
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-resume"
