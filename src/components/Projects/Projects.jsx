@@ -9,7 +9,7 @@ const Projects = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section className="section" id="projects" ref={ref}>
+    <section className="section" id="projects" ref={ref} data-aos="fade-up">
       <div className="container">
         <motion.span className="section-label" variants={fadeInLeft} initial="hidden" animate={isVisible ? 'visible' : 'hidden'}>
           04 — Projects
@@ -53,14 +53,20 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="proj-links">
-                <a href={p.github} target="_blank" rel="noopener noreferrer" className="proj-link">
-                  <FiGithub /> GitHub
-                </a>
-                <a href={p.live} target="_blank" rel="noopener noreferrer" className="proj-link">
-                  <FiExternalLink /> Live Demo
-                </a>
-              </div>
+              {(p.github || (p.live && p.live !== '#')) && (
+                <div className="proj-links">
+                  {p.github && (
+                    <a href={p.github} target="_blank" rel="noopener noreferrer" className="proj-link">
+                      <FiGithub /> GitHub
+                    </a>
+                  )}
+                  {p.live && p.live !== '#' && (
+                    <a href={p.live} target="_blank" rel="noopener noreferrer" className="proj-link">
+                      <FiExternalLink /> Live Demo
+                    </a>
+                  )}
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.div>

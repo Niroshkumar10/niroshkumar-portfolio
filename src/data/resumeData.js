@@ -5,17 +5,17 @@
 export const personalInfo = {
   name: "Niroshkumar K",
   title: "Full Stack Developer",
-  tagline: ["React.js Expert", "Node.js Developer", "UI/UX Enthusiast", "API Architect", "Problem Solver"],
+  tagline: ["React.js Expert", "Node.js Developer", "Flutter Developer", "Real-time Systems Builder", "API Architect"],
   email: "niroshkumar35@gmail.com",
   phone: "+91 73395 35472",
   location: "Coimbatore, Tamil Nadu, India",
   linkedin: "https://linkedin.com/in/nirosh-kumark2003",
   github: "https://github.com/Niroshkumar10",
   summary:
-    "Results-driven Full Stack Developer with 1+ year of production experience building scalable web applications using React.js, Node.js, Express.js, JavaScript, MySQL, and MongoDB. Proven track record of delivering end-to-end features including JWT authentication, role-based access control, RESTful APIs, and e-commerce workflows.",
+    "Full Stack Developer with 2+ years of experience building and maintaining production web and mobile applications with React.js, Flutter, Node.js, Express.js and MySQL. Experienced in REST API design, OTP/JWT authentication, role-based access control, and real-time and live location features using Socket.IO, Firebase Cloud Messaging and Google Maps. Contributed end-to-end to MicroLab (home sample collection) and RedTaxi (cab booking), covering booking, dispatch, live tracking, fare, payment and admin workflows.",
   stats: [
-    { value: 1, suffix: "+", label: "Year Experience" },
-    { value: 20, suffix: "+", label: "APIs Built" },
+    { value: 2, suffix: "+", label: "Years Experience" },
+    { value: 2, suffix: "", label: "Production Apps" },
     { value: 5, suffix: "+", label: "Projects Shipped" },
     { value: 30, suffix: "%", label: "Dev Time Saved" },
   ],
@@ -25,38 +25,38 @@ export const skillCategories = [
   {
     id: "frontend",
     icon: "🎨",
-    name: "Frontend",
-    skills: ["React.js", "JavaScript ES6+", "Vite", "Redux Toolkit", "HTML5", "CSS3", "SASS", "Tailwind CSS", "Bootstrap"],
+    name: "Frontend & Mobile",
+    skills: ["JavaScript ES6+", "React.js", "Redux Toolkit", "Vite", "Flutter", "HTML5", "CSS3", "SASS", "Tailwind CSS", "Bootstrap"],
   },
   {
     id: "backend",
     icon: "⚙️",
     name: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT Auth", "RBAC", "CodeIgniter"],
+    skills: ["Node.js", "Express.js", "REST APIs", "Socket.IO", "JWT Auth", "OTP Auth", "RBAC", "CodeIgniter"],
   },
   {
     id: "database",
     icon: "🗄️",
     name: "Database",
-    skills: ["MySQL", "MongoDB", "CRUD Operations"],
+    skills: ["MySQL", "MongoDB", "Schema Design", "CRUD Operations"],
+  },
+  {
+    id: "integrations",
+    icon: "📡",
+    name: "Integrations",
+    skills: ["Firebase", "Firebase Cloud Messaging", "Google Maps", "GPS / Live Location Tracking"],
   },
   {
     id: "tools",
     icon: "🛠️",
-    name: "Dev Tools",
-    skills: ["Git", "GitLab", "Postman", "VS Code", "npm", "CI/CD Pipelines"],
-  },
-  {
-    id: "uiux",
-    icon: "🎯",
-    name: "UI/UX Design",
-    skills: ["Figma", "Adobe XD", "Responsive Design", "Component Architecture"],
+    name: "Dev Tools & Design",
+    skills: ["Git", "GitLab", "GitLab CI/CD", "Postman", "VS Code", "npm", "Figma", "Adobe XD"],
   },
   {
     id: "practices",
     icon: "🔄",
     name: "Practices",
-    skills: ["Agile", "Code Review", "Debugging", "Performance Optimization", "Accessibility"],
+    skills: ["Agile", "Debugging", "Code Review", "Production Deployment"],
   },
 ];
 
@@ -69,13 +69,11 @@ export const experiences = [
     period: "Jun 2024 – Present",
     type: "Full-time",
     points: [
-      "Engineered scalable, production-ready UIs using React.js, Vite, JavaScript, and Redux Toolkit, reducing component re-renders and improving app performance.",
-      "Designed and integrated 20+ RESTful APIs using Node.js and Express.js, supporting product management, order processing, and user authentication workflows.",
-      "Implemented secure JWT-based authentication with role-based access control (Admin/User), strengthening application security across modules.",
-      "Built full e-commerce workflows including product listing, shopping cart, checkout flow, and payment gateway integration.",
-      "Developed and maintained database schemas and CRUD operations using MySQL and MongoDB for multi-module enterprise applications.",
-      "Created a reusable component library (TextField, Dropdown, Dialog) adopted across 5+ internal projects, reducing development time by ~30%.",
-      "Collaborated with senior developers on code reviews, performance optimization, and CI/CD deployment pipelines via GitLab.",
+      "Develop and maintain production web and mobile apps, including MicroLab and RedTaxi, with Flutter, React.js, Node.js and MySQL.",
+      "Design and integrate REST APIs and database schemas for authentication, booking, dispatch, fare, payment and reporting workflows.",
+      "Implement OTP/JWT authentication, role-based access control, Socket.IO real-time updates, FCM notifications and Google Maps/GPS.",
+      "Built React.js apps with Vite and Redux Toolkit, including e-commerce workflows (listing, cart, checkout, payment gateway) and a reusable component library adopted across 5+ internal projects, reducing development effort by ~30%.",
+      "Debug, test and optimize services; support production deployments, code reviews and GitLab CI/CD.",
     ],
   },
   {
@@ -86,8 +84,7 @@ export const experiences = [
     period: "Mar 2024 – May 2024",
     type: "Internship",
     points: [
-      "Developed interactive React.js applications including a digital clock, to-do app, calculator, and dynamic profile card, demonstrating state management proficiency.",
-      "Implemented localStorage for persistent data handling and managed component-level state using React Hooks (useState, useEffect).",
+      "Built interactive React.js apps (clock, to-do, calculator, profile card) using React Hooks and localStorage for state and persistence.",
     ],
   },
   {
@@ -98,8 +95,7 @@ export const experiences = [
     period: "Jul 2024 – Aug 2024",
     type: "Internship",
     points: [
-      "Designed and developed responsive web pages using HTML5, CSS3, and JavaScript, meeting cross-browser compatibility standards.",
-      "Collaborated on UI enhancements and contributed to improving page load performance and visual consistency.",
+      "Developed responsive, cross-browser web pages with HTML5, CSS3 and JavaScript, and contributed to UI and page-load improvements.",
     ],
   },
 ];
@@ -108,6 +104,28 @@ export const projects = [
   {
     id: 1,
     num: "01",
+    category: "Mobile + Backend",
+    title: "MicroLab — Home Collection Monitoring System",
+    description:
+      "Customer and technician Flutter apps with a Node.js/Express.js + MySQL backend for home sample collection — booking, slot scheduling, real-time technician dispatch, live GPS tracking and the full lab booking lifecycle.",
+    features: ["Real-time Dispatch", "Live GPS Tracking", "OTP + JWT Auth", "FCM Notifications", "Slot Scheduling", "PDF Reports"],
+    stack: ["Flutter", "Node.js", "Express.js", "MySQL", "Socket.IO", "FCM", "Google Maps", "JWT"],
+    highlight: true,
+  },
+  {
+    id: 2,
+    num: "02",
+    category: "Mobile + Backend",
+    title: "RedTaxi — Cab Booking Application",
+    description:
+      "Customer and driver Flutter apps with versioned Node.js/Express.js REST APIs — map-based booking, fare estimation, sequential Socket.IO driver dispatch with double-assignment protection, live tracking, driver wallet and CodeIgniter admin.",
+    features: ["Sequential Driver Dispatch", "Fare Rules by Zone", "Live Tracking", "Pickup OTP", "Driver Wallet", "Ratings"],
+    stack: ["Flutter", "Node.js", "Express.js", "MySQL", "Socket.IO", "FCM", "Google Maps", "JWT", "CodeIgniter"],
+    highlight: true,
+  },
+  {
+    id: 3,
+    num: "03",
     category: "Full Stack",
     title: "E-Commerce Platform",
     description:
@@ -116,11 +134,11 @@ export const projects = [
     stack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Redux Toolkit"],
     github: "https://github.com/Niroshkumar10",
     live: "#",
-    highlight: true,
+    highlight: false,
   },
   {
-    id: 2,
-    num: "02",
+    id: 4,
+    num: "04",
     category: "Frontend",
     title: "Hospitality Management Checkout UI",
     description:
@@ -132,8 +150,8 @@ export const projects = [
     highlight: false,
   },
   {
-    id: 3,
-    num: "03",
+    id: 5,
+    num: "05",
     category: "Dashboard",
     title: "Inventory Management System",
     description:
@@ -145,8 +163,8 @@ export const projects = [
     highlight: false,
   },
   {
-    id: 4,
-    num: "04",
+    id: 6,
+    num: "06",
     category: "UI/UX",
     title: "Portfolio Website & UI Clones",
     description:
@@ -154,11 +172,10 @@ export const projects = [
     features: ["Pixel-perfect Clones", "Fully Responsive", "Cross-browser", "Design Fidelity", "Tailwind CSS"],
     stack: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
     github: "https://github.com/Niroshkumar10",
-    live: "#",
+    live: "https://niroshkumar10.github.io/niroshkumar-portfolio",
     highlight: false,
   },
 ];
-
 export const education = [
   {
     id: 1,
@@ -195,10 +212,10 @@ export const certifications = [
 ];
 
 export const highlights = [
-  { icon: "⚡", title: "Performance-Focused", desc: "Reduced component re-renders and optimized app performance using Redux Toolkit and Vite" },
-  { icon: "🏗️", title: "Component Library Author", desc: "Built a reusable component library adopted across 5+ internal projects, cutting dev time by ~30%" },
-  { icon: "🔐", title: "Security-Minded", desc: "Implemented JWT-based authentication with RBAC across multi-module enterprise applications" },
-  { icon: "📦", title: "API Architect", desc: "Designed and integrated 20+ RESTful APIs for product management, orders, and user workflows" },
+  { icon: "⚡", title: "Real-time Systems", desc: "Built Socket.IO dispatch with timeouts, offer tracking and double-assignment protection, plus live GPS tracking" },
+  { icon: "🏗️", title: "Component Library Author", desc: "Built a reusable component library adopted across 5+ internal projects, cutting dev effort by ~30%" },
+  { icon: "🔐", title: "Security-Minded", desc: "Implemented OTP/JWT authentication with role-based access control across web and mobile apps" },
+  { icon: "📱", title: "Web + Mobile", desc: "Shipped production Flutter and React.js apps backed by Node.js/Express.js REST APIs and MySQL" },
 ];
 
 export const services = [
@@ -211,20 +228,20 @@ export const services = [
   {
     id: 2,
     title: "Backend Development",
-    desc: "Scalable REST APIs with Node.js and Express.js, complete with middleware, error handling, and clean MVC architecture.",
-    tags: ["Node.js", "Express.js", "REST APIs", "MVC"],
+    desc: "Versioned REST APIs with Node.js and Express.js for authentication, booking, dispatch, fare, payment and reporting workflows.",
+    tags: ["Node.js", "Express.js", "REST APIs", "CodeIgniter"],
   },
   {
     id: 3,
     title: "Database Design",
-    desc: "Efficient schema design and CRUD operations in MySQL and MongoDB, handling complex relational data for enterprise-scale apps.",
+    desc: "Schema design and CRUD operations in MySQL and MongoDB for bookings, rides, payments, wallets, ratings and reporting.",
     tags: ["MySQL", "MongoDB", "Schema Design", "CRUD"],
   },
   {
     id: 4,
-    title: "Full Stack Applications",
-    desc: "End-to-end web apps — from database design to UI delivery. Dashboards, e-commerce, inventory systems, and SaaS products.",
-    tags: ["Full Stack", "E-Commerce", "Dashboards", "SaaS"],
+    title: "Mobile & Real-time Apps",
+    desc: "Cross-platform Flutter apps with live location tracking, Socket.IO real-time updates, push notifications and Google Maps routing.",
+    tags: ["Flutter", "Socket.IO", "FCM", "Google Maps"],
   },
   {
     id: 5,
@@ -235,31 +252,7 @@ export const services = [
   {
     id: 6,
     title: "Auth & Security",
-    desc: "JWT-based authentication flows with role-based access control, protected routes, and secure session management.",
-    tags: ["JWT", "RBAC", "Authentication", "Security"],
-  },
-];
-
-export const blogPosts = [
-  {
-    id: 1,
-    title: "Building Scalable React Apps with Redux Toolkit",
-    excerpt: "Best practices for state management, code splitting, and component architecture in large-scale React applications.",
-    tags: ["React.js", "Redux", "Architecture"],
-    readTime: "5 min",
-  },
-  {
-    id: 2,
-    title: "JWT + RBAC: Securing Node.js APIs the Right Way",
-    excerpt: "A practical implementation guide for role-based authentication and authorization in Express.js backends.",
-    tags: ["Node.js", "JWT", "Security"],
-    readTime: "7 min",
-  },
-  {
-    id: 3,
-    title: "From Figma to Code: My Full Stack UI Workflow",
-    excerpt: "How I bridge design and development to deliver pixel-perfect, responsive interfaces from Figma designs.",
-    tags: ["UI/UX", "CSS", "Workflow"],
-    readTime: "4 min",
+    desc: "OTP and JWT-based authentication flows with role-based access control, protected routes, and secure session management.",
+    tags: ["OTP", "JWT", "RBAC", "Security"],
   },
 ];

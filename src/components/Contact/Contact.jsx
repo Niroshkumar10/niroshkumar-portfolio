@@ -36,7 +36,7 @@ const Contact = ({ showToast }) => {
   };
 
   return (
-    <section className="section" id="contact" ref={ref}>
+    <section className="section" id="contact" ref={ref} data-aos="zoom-in">
       <div className="container">
         <motion.span className="section-label" variants={fadeInLeft} initial="hidden" animate={isVisible ? 'visible' : 'hidden'}>
           06 — Contact

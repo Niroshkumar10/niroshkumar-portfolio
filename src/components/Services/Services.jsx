@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { FiMonitor, FiServer, FiDatabase, FiLayers, FiFeather, FiShield } from 'react-icons/fi';
+import { FiMonitor, FiServer, FiDatabase, FiSmartphone, FiFeather, FiShield } from 'react-icons/fi';
 import { services } from '../../data/resumeData';
 import './Services.css';
 
-const ICONS = [FiMonitor, FiServer, FiDatabase, FiLayers, FiFeather, FiShield];
+const ICONS = [FiMonitor, FiServer, FiDatabase, FiSmartphone, FiFeather, FiShield];
 
 const Services = () => (
-  <section className="section services" id="services">
+  <section className="section services" id="services" data-aos="fade-up">
     <div className="container">
       <motion.span
         className="section-label"

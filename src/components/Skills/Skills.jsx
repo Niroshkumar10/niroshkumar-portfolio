@@ -8,7 +8,7 @@ const Skills = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section className="section" id="skills" ref={ref}>
+    <section className="section" id="skills" ref={ref} data-aos="zoom-in-up">
       <div className="container">
         <motion.span className="section-label" variants={fadeInLeft} initial="hidden" animate={isVisible ? 'visible' : 'hidden'}>
           02 — Skills

@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
@@ -9,7 +11,6 @@ import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
-import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Loader from './components/Loader/Loader';
@@ -47,6 +48,12 @@ const App = () => {
     animate();
     return () => { window.removeEventListener('mousemove', onMove); cancelAnimationFrame(raf); };
   }, []);
+
+  // AOS — init once content has mounted after the loader
+  useEffect(() => {
+    if (!loaded) return;
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+  }, [loaded]);
 
   // Scroll
   useEffect(() => {
@@ -93,8 +100,6 @@ const App = () => {
               <Projects />
               <div className="divider" />
               <Education />
-              <div className="divider" />
-              <Blog />
               <div className="divider" />
               <Contact showToast={showToast} />
             </main>

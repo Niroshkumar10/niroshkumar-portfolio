@@ -55,7 +55,7 @@ const TechSphere = () => (
       animate={{ y: [0, -7, 0] }}
       transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut', delay: 1.1 }}
     >
-      <span style={{ color: '#47A248' }}>◉</span> MongoDB
+      <span style={{ color: '#54C5F8' }}>◆</span> Flutter
     </motion.div>
 
     <motion.div
@@ -226,7 +226,8 @@ const Hero = () => {
   const typeSequence = personalInfo.tagline.flatMap((t) => [t, 1800]);
 
   return (
-    <section className="hero" id="hero">
+    <section className="hero" id="hero" data-aos="fade">
+
       <div className="hero-blobs">
         <div className="blob blob-1" />
         <div className="blob blob-2" />

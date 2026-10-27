@@ -7,7 +7,7 @@ import './Footer.css';
 const navLinks = ['about', 'skills', 'experience', 'projects', 'education', 'contact'];
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className="footer" data-aos="fade-up" data-aos-offset="0">
     <div className="container footer-inner">
       <div className="footer-brand">
         <div className="footer-logo">NK.</div>
@@ -36,7 +36,7 @@ const Footer = () => (
     </div>
 
     <div className="footer-copy">
-      <p>© 2025 Niroshkumar K. Built with <FiHeart style={{ display: 'inline', verticalAlign: 'middle', color: 'var(--blue-electric)' }} /> React + Vite</p>
+      <p>© 2026 Niroshkumar K. Built with <FiHeart style={{ display: 'inline', verticalAlign: 'middle', color: 'var(--blue-electric)' }} /> React + Vite</p>
     </div>
   </footer>
 );

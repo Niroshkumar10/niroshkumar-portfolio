@@ -8,7 +8,7 @@ const About = () => {
   const { ref, isVisible } = useScrollAnimation(0.15);
 
   return (
-    <section className="section" id="about" ref={ref}>
+    <section className="section" id="about" ref={ref} data-aos="fade-right">
       <div className="container">
         <motion.span
           className="section-label"
@@ -39,15 +39,16 @@ const About = () => {
           >
             <div className="about-avatar">NK</div>
             <p>
-              I'm a Full Stack Developer based in Coimbatore, Tamil Nadu, with a passion for building
-              production-ready web applications from the ground up. Currently working at NeuralArc
-              Global Pvt Ltd, I've delivered e-commerce platforms, admin dashboards, and enterprise
-              applications.
+              I'm a Full Stack Developer based in Coimbatore, Tamil Nadu, with 2+ years of experience
+              building production web and mobile applications. At NeuralArc Global Pvt Ltd, I've
+              contributed end-to-end to MicroLab (home sample collection) and RedTaxi (cab booking),
+              covering booking, dispatch, live tracking, fare, payment and admin workflows.
             </p>
             <p>
-              I thrive in agile environments, working closely with senior developers on code reviews,
-              CI/CD pipelines, and performance optimization. My approach blends clean architecture
-              with pixel-perfect UI execution aligned with Figma prototypes.
+              I work across Flutter, React.js, Node.js, Express.js and MySQL, with a focus on REST API
+              design, OTP/JWT authentication, role-based access control, and real-time features using
+              Socket.IO, Firebase Cloud Messaging and Google Maps. I support production deployments,
+              code reviews and GitLab CI/CD in an agile team.
             </p>
            <p>
   A graduate in Computer Science and Engineering from Arjun College of Technology,
